@@ -1,3 +1,5 @@
+export const APISNG = "https://rgw.k8s.apis.ng/centric-platforms/uat"
+
 export async function postFormDataAsJson({ endpoint, formData }) {
   const plainFormData = Object.fromEntries(formData.entries())
   const formDataJsonString = JSON.stringify(plainFormData)
@@ -14,7 +16,8 @@ export async function postFormDataAsJson({ endpoint, formData }) {
     body: formDataJsonString,
   }
 
-  const response = await fetch(endpoint, fetchOptions)
+  const endpointURL = APISNG + endpoint
+  const response = await fetch(endpointURL, fetchOptions)
 
   if (!response.ok) {
     const errorMessage = await response.text()
