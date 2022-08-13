@@ -1,0 +1,318 @@
+Customer Identity
+
+Account Opening Service
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateCustomerAccount
+{
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Source",
+      "example": "BWONLINE"
+    },
+    "app_user_id": {
+      "type": "string",
+      "description": "App User ID",
+      "example": "BWORLDUSER"
+    },
+    "app_branch_code": {
+      "type": "string",
+      "description": "App Branch Code",
+      "example": 99
+    },
+    "account_branch_code": {
+      "type": "string",
+      "description": "Account Branch Code",
+      "example": "171"
+    },
+    "customer_no": {
+      "type": "string",
+      "example": 8117565,
+      "description": "Customer Number"
+    },
+    "account_class": {
+      "type": "string",
+      "example": "020003",
+      "description": "Account Class"
+    },
+    "account_ccycode": {
+      "type": "string",
+      "example": "NGN",
+      "description": "Account Country Currency Code"
+    },
+    "account_name": {
+      "type": "string",
+      "example": "Nick Thomas",
+      "description": "Account Name"
+    },
+    "account_onpostnocr": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On POST NO CREDIT?"
+    },
+    "account_ondormant": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On Dormant?"
+    },
+    "account_classtype": {
+      "type": "string",
+      "example": "S",
+      "description": "Account Class Type"
+    },
+    "account_opendate": {
+      "type": "string",
+      "example": "2020-08-03",
+      "description": "Account Opening Date"
+    },
+    "account_onfrozen": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On Frozen?"
+    },
+    "chequebook_account": {
+      "type": "string",
+      "example": "Y",
+      "description": "Cheque Book Account?"
+    },
+    "atm_account": {
+      "type": "string",
+      "example": "Y",
+      "description": "ATM Account?"
+    },
+    "min_balreqd": {
+      "type": "string",
+      "example": "0",
+      "description": "Minimum Balance Required"
+    },
+    "salary_account": {
+      "type": "string",
+      "example": "N",
+      "description": "Salary Account?"
+    },
+    "maker_id": {
+      "type": "string",
+      "example": "BWORLDUSER",
+      "description": "Maker ID"
+    },
+    "checker_id": {
+      "type": "string",
+      "example": "BWORLDUSER",
+      "description": "Checker ID"
+    },
+    "auth_stat": {
+      "type": "string",
+      "example": "A",
+      "description": "Auth Stat"
+    },
+    "comp_mis2": {
+      "type": "string",
+      "example": "RBB256",
+      "description": "Comp MIS 2"
+    },
+    "comp_mis3": {
+      "type": "string",
+      "description": "Comp MIS 3"
+    },
+    "comp_mis4": {
+      "type": "string",
+      "example": "12338618",
+      "description": "Comp MIS 4"
+    },
+    "account_onpnd": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On POST NO DEBIT?"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "app_user_id",
+    "app_branch_code",
+    "account_branch_code",
+    "customer_no",
+    "account_class",
+    "account_ccycode",
+    "account_name",
+    "account_onpostnocr",
+    "account_ondormant",
+    "account_classtype",
+    "account_opendate",
+    "account_onfrozen",
+    "chequebook_account",
+    "atm_account",
+    "min_balreqd",
+    "salary_account",
+    "maker_id",
+    "checker_id",
+    "auth_stat",
+    "account_onpnd"
+  ],
+  "example": {
+    "source": "TESTAPP",
+    "app_user_id": "TESTAPPUSR",
+    "app_branch_code": "099",
+    "account_branch_code": "099",
+    "customer_no": "007479302",
+    "account_class": "020008",
+    "account_ccycode": "NGN",
+    "account_name": "DANIEL MAKINDE",
+    "account_onpnd": "N",
+    "account_onpostnocr": "N",
+    "account_ondormant": "N",
+    "account_classtype": "S",
+    "account_opendate": "2022-06-20 12:00:00",
+    "account_onfrozen": "N",
+    "chequebook_account": "N",
+    "atm_account": "N",
+    "min_balreqd": "0",
+    "salary_account": "N",
+    "maker_id": "TESTAPPUSR",
+    "checker_id": "TESTAPPUSR",
+    "auth_stat": "A",
+    "comp_mis2": "ABK",
+    "comp_mis3": "",
+    "comp_mis4": "12632119"
+  },
+  "name": "CreateCustomerAccount",
+  "type": "object"
+}{
+  "properties": {
+    "response_code": {
+      "type": "string",
+      "description": "Response Code",
+      "example": "00"
+    },
+    "response_desc": {
+      "type": "string",
+      "example": "Successful Request",
+      "description": "Response Description"
+    },
+    "accountno_created": {
+      "description": "Account Number Created",
+      "example": "1390941128",
+      "type": "string"
+    },
+    "bo_code": {
+      "type": "string",
+      "description": "BO Code",
+      "example": "ST-CUS62"
+    },
+    "bo_message": {
+      "type": "string",
+      "description": "BO Message",
+      "example": "Cheque Book Facility changed from the default value."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Customer Account Creation Validation Response Message",
+  "example": {
+    "response_code": "00",
+    "response_desc": "Successful Request",
+    "accountno_created": "1590925269",
+    "bo_code": "ST-SAVE-002",
+    "bo_message": "Record Successfully Saved and Authorized"
+  }
+}
+
+Customer Identity Validation
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/NINValidationByNIN
+{
+  "example": {
+    "searchParameter": "02730846093",
+    "verificationType": "NIN-SEARCH"
+  },
+  "title": "Body",
+  "type": "object",
+  "name": "body"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/VotersCard
+{
+  searchParameter:"A07011111"
+  country:"NG"
+  verificationType: "VIN-FACE-MATCH-VERIFICATION",
+  selfie: "data:image/jpeg;base64...."
+  selfieToDatabaseMatch:"true"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/InternationalPassport
+{
+  "searchParameter": "A07011111",
+  "firstName": "John",
+  "lastName": "Doe",
+  "dob": "1974-09-24",
+  "verificationType": "PASSPORT-FULL-DETAILS"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/DriversLicense
+{
+  "countryCode": "NG",
+  "firstName": "John",
+  "lastName": "Doe",
+  "dob": "1988-11-05",
+  "searchParameter": "AAA00000AA00",
+  "verificationType": "DRIVER-LICENSE-FULL-DETAIL-VERIFICATION"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/BVN
+{
+  "channel_code": "APISNG",
+  "bvn": "22152793496"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/customer/identity/biometricapi/Verify
+{
+  "bvn": "22273209101",
+  "template": "biometrics finger template",
+  "finger_position": "RT",
+  "device_id": "ZF044001",
+  "bank_code": "044"
+}{
+  "response_code": "00",
+  "response_message": "OTP has been sent to your email address at userexample@gmail.com 123456",
+  "response_time": "10-08-2022 11:27:03",
+  "response_data": {
+    "succeeded": false,
+    "responseCode": "19",
+    "message": null,
+    "errors": null,
+    "data": null
+  }
+}
+
+Account Enquiry
+- https://rgw.k8s.apis.ng/centric-platforms/uat/AccessBankMaintenancenEnquiry/v1/GetCustomerAcctsDetail
+{
+  "title": "GetCustomerAcctsDetailRequest",
+  "example": {
+    "channel_code": "PRIMUSLITE",
+    "account_no": "0760261888"
+  },
+  "type": "object",
+  "properties": {
+    "channel_code": {
+      "type": "string"
+    },
+    "account_no": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "channel_code",
+    "account_no"
+  ],
+  "name": "Body"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/AccessBankMaintenancenEnquiry/v1/GetAccountDetails
+{
+  "type": "object",
+  "example": {
+    "channel_code": "TESTAPP",
+    "account_no": "0689658501",
+    "bank_code": "044"
+  },
+  "name": "body"
+}

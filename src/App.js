@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg"
+import { Card, CardBody, CardHeader, Nav, NavItem, NavLink } from "reactstrap"
+import { MdAppRegistration, MdLogin } from "react-icons/md"
+import { Outlet, Link, Navigate } from "react-router-dom"
+
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Card className="m-2">
+      <CardHeader>Market Moni</CardHeader>
+      <Outlet />
+    </Card>
+  )
 }
 
-export default App;
+export default App

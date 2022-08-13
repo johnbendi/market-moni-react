@@ -1,0 +1,545 @@
+Instant Loans
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/FetchEligibility
+{
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Request ID",
+      "example": "BW02072018001"
+    },
+    "phone_number": {
+      "type": "string",
+      "description": "Phone Number",
+      "example": "08038087624"
+    },
+    "module_name": {
+      "type": "string",
+      "description": "Module Name",
+      "example": "REM"
+    },
+    "created_date": {
+      "type": "string",
+      "description": "Date Of Request",
+      "example": "2018-07-02T10:00:09.9766194+02:00"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "phone_number",
+    "module_name",
+    "created_date"
+  ],
+  "type": "object",
+  "name": "FetchEligibility"
+
+  "example": {
+  "request_id": "BW02072018001",
+  "phone_number": "08038087624",
+  "module_name": "REM",
+  "created_date": "2018-07-02T10:00:09.9766194+02:00"
+}
+}{
+  "properties": {
+    "tenor": {
+      "type": "string",
+      "example": "",
+      "description": "Tenor"
+    },
+    "productName": {
+      "type": "string",
+      "example": "",
+      "description": "Product Name"
+    },
+    "request_id": {
+      "description": "Request ID",
+      "example": "BW02072018001",
+      "type": "string"
+    },
+    "amount": {
+      "type": "string",
+      "description": "Amount",
+      "example": "1000"
+    },
+    "lastSalaryDate": {
+      "type": "string",
+      "description": "Last Salary Date"
+    },
+    "response_id": {
+      "type": "string",
+      "description": "Response ID",
+      "example": "b84bb42a-a0c9-4926-b60c-0dd3d273d998"
+    },
+    "avg_salary": {
+      "type": "string",
+      "description": "Average Salary",
+      "example": ""
+    },
+    "hasOptin": {
+      "type": "string",
+      "description": "Has Optin?",
+      "example": "N"
+    },
+    "last_sal_amount": {
+      "type": "string",
+      "description": "Last Salary Amount"
+    },
+    "sal_account": {
+      "type": "string",
+      "description": "Salary Account",
+      "example": "0689658501"
+    },
+    "MinimumAmount": {
+      "type": "string",
+      "description": "Minimum Amount",
+      "example": "0"
+    },
+    "interest": {
+      "type": "string",
+      "description": "Interest",
+      "example": "4"
+    },
+    "maintenance": {
+      "type": "string",
+      "description": "Maintenance",
+      "example": "1"
+    },
+    "module": {
+      "type": "string",
+      "description": "Module"
+    },
+    "TotalDelinquentAmount": {
+      "type": "string",
+      "description": "Total Delinquent Amount"
+    },
+    "DelinquentLoanCount": {
+      "type": "string",
+      "description": "Deliquent Loan Count"
+    },
+    "response_descr": {
+      "type": "string",
+      "description": "Response Description",
+      "example": "USSD_ACCESS"
+    },
+    "response_code": {
+      "type": "string",
+      "description": "Response Code",
+      "example": "00"
+    },
+    "full_description": {
+      "type": "string",
+      "description": "Full Description"
+    },
+    "DisplayMessage": {
+      "type": "string",
+      "description": "Display Message"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Validate Customer Eligibility To Request PayDay Loan"
+
+  "example": {
+  "tenor": "",
+  "productName": "",
+  "request_id": "BW02072018001",
+  "amount": "1000",
+  "lastSalaryDate": "Cappelletti",
+  "response_id": "b84bb42a-a0c9-4926-b60c-0dd3d273d998",
+  "avg_salary": "",
+  "hasOptin": "N",
+  "last_sal_amount": "Carroll",
+  "sal_account": "0689658501",
+  "MinimumAmount": "0",
+  "interest": "4",
+  "maintenance": "1",
+  "module": "ocfufu",
+  "TotalDelinquentAmount": "7247851541233664",
+  "DelinquentLoanCount": "nevi",
+  "response_descr": "USSD_ACCESS",
+  "response_code": "00",
+  "full_description": "Tada wati lelru nemo tir vivopiho pasove ku uvuepison eku got sonip womawhol pufcu vazremfa iro kacja vosihiwi.",
+  "DisplayMessage": "59"
+}
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/RequestLoan
+{
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Request ID",
+      "example": "BW02072018001"
+    },
+    "phone_number": {
+      "type": "string",
+      "description": "Phone Number",
+      "example": "08133184187"
+    },
+    "amount": {
+      "type": "string",
+      "description": "Amount",
+      "example": "1000"
+    },
+    "module_name": {
+      "type": "string",
+      "description": "Module Name",
+      "example": "REM"
+    },
+    "transNumber": {
+      "type": "string",
+      "description": "Transaction Number",
+      "example": "1"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "phone_number",
+    "amount",
+    "module_name",
+    "transNumber"
+  ],
+  "name": "RequestLoan",
+  "type": "object",
+  "example": {
+  "request_id": "BW02072018001",
+  "phone_number": "08133184187",
+  "amount": "1000",
+  "module_name": "REM",
+  "transNumber": "1"
+}
+}{
+  "properties": {
+    "loanref": {
+      "type": "string",
+      "example": "",
+      "description": "Loan Reference"
+    },
+    "response_id": {
+      "type": "string",
+      "example": "cf80f371-3314-4952-b0b8-7d22560d8ce5",
+      "description": "Response ID"
+    },
+    "request_id": {
+      "description": "Request ID",
+      "example": "BW02072018001",
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer ID"
+    },
+    "loan_accountnumber": {
+      "type": "string",
+      "description": "Loan Account Number"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone",
+      "example": "08133184187"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency",
+      "example": "NGN"
+    },
+    "amount": {
+      "type": "string",
+      "description": "Amount",
+      "example": "1000"
+    },
+    "disbursement_date": {
+      "type": "string",
+      "description": "Disbursement Date",
+      "example": "2018-07-02T13:13:53.2038721+01:00"
+    },
+    "modulename": {
+      "type": "string",
+      "description": "Module Name"
+    },
+    "IsThirdParty": {
+      "type": "string",
+      "description": "Is Third Party?",
+      "example": "N"
+    },
+    "hasOptin": {
+      "type": "string",
+      "description": "Has Optin?",
+      "example": "Y"
+    },
+    "IsAccessBankCustomer": {
+      "type": "boolean",
+      "description": "Is the Customer an Access Bank Customer?",
+      "example": "false"
+    },
+    "response_descr": {
+      "type": "string",
+      "description": "Response Description",
+      "example": "Request Queued Successfully"
+    },
+    "response_code": {
+      "type": "string",
+      "description": "Response Code",
+      "example": "00"
+    },
+    "full_description": {
+      "type": "string",
+      "description": "Full Description"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Response Message To Loan Request",
+  "example": {
+  "loanref": "",
+  "response_id": "cf80f371-3314-4952-b0b8-7d22560d8ce5",
+  "request_id": "BW02072018001",
+  "customer_id": "3131740971335680",
+  "loan_accountnumber": "30041352736811",
+  "phone": "08133184187",
+  "currency": "NGN",
+  "amount": "1000",
+  "disbursement_date": "2018-07-02T13:13:53.2038721+01:00",
+  "modulename": "Dominic Wilkins",
+  "IsThirdParty": "N",
+  "hasOptin": "Y",
+  "IsAccessBankCustomer": "false",
+  "response_descr": "Request Queued Successfully",
+  "response_code": "00",
+  "full_description": "Fu kana fuoj taera se lasu vev vobmawral leh dubova fonpo pe."
+}
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/GetLoanSummaryByCustomerID
+{
+  "properties": {
+    "customer_no": {
+      "type": "string",
+      "description": "Customer ID",
+      "example": "000000012"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "customer_no"
+  ],
+  "name": "GetLoanSummary",
+  "type": "object",
+  "example": {
+  "customer_no": "000000012"
+}
+}{
+  "properties": {
+    "ResponseCode": {
+      "type": "string",
+      "example": "00",
+      "description": "Response Code"
+    },
+    "ResponseMessage": {
+      "type": "string",
+      "example": "Successful",
+      "description": "Response Message"
+    },
+    "loanstmtbycustomernoresp": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "LoanAccountNumber": {
+            "type": "string",
+            "example": "099CTLA153010003",
+            "description": "Loan Account Number"
+          },
+          "CustomerNo": {
+            "type": "integer",
+            "description": "Customer ID",
+            "example": "000000012",
+            "format": "int32"
+          },
+          "BranchCode": {
+            "type": "integer",
+            "example": "099",
+            "description": "Customer Branch",
+            "format": "int32"
+          },
+          "ProductCode": {
+            "type": "string",
+            "description": "Access Bank Product",
+            "example": "CTLA"
+          },
+          "ProductCategory": {
+            "type": "string",
+            "example": "CORPORATE",
+            "description": "Product Category"
+          },
+          "ProductDescription": {
+            "type": "string",
+            "example": "CORPORATE TERM LOANS AMORTIZED",
+            "description": "Product Description"
+          },
+          "CustomerName": {
+            "type": "string",
+            "description": "Customer Name",
+            "example": "MUSTAPHA  ZUBAIRU"
+          },
+          "DomiciliaryAddress": {
+            "type": "string",
+            "description": "Domiciliary Address",
+            "example": "RAPHAEL OKONKWO COMP,UMUEZEOKAMZIM VILLAGE,NNEWI,  NNEWI"
+          },
+          "CustomerAddress": {
+            "type": "string",
+            "description": "Customer Address",
+            "example": "RAPHAEL OKONKWO COMP,UMUEZEOKAMZIM VILLAGE,NNEWI,  NNEWI,NG"
+          },
+          "OriginalStartDate": {
+            "type": "string",
+            "description": "Original Start Date",
+            "example": "2015-10-28 00:00:00",
+            "format": "date-time"
+          },
+          "BookDate": {
+            "type": "string",
+            "description": "Book Date",
+            "example": "2015-10-28 00:00:00",
+            "format": "date-time"
+          },
+          "ValueDate": {
+            "type": "string",
+            "description": "Value Date",
+            "format": "date-time",
+            "example": "2015-10-28 00:00:00"
+          },
+          "MaturityDate": {
+            "type": "string",
+            "description": "Maturity Date",
+            "example": "2025-10-28 00:00:00",
+            "format": "date-time"
+          },
+          "LoanTenor": {
+            "type": "integer",
+            "example": "3653",
+            "format": "int32",
+            "description": "Loan Tenor"
+          },
+          "LoanStatus": {
+            "type": "string",
+            "description": "Loan Status",
+            "example": "Active"
+          },
+          "CurrencyCode": {
+            "type": "string",
+            "description": "Currency Code",
+            "example": "NGN"
+          },
+          "AmountFinanced": {
+            "type": "string",
+            "description": "Amount Financed",
+            "example": "1.0E7"
+          },
+          "ApplicantName": {
+            "type": "string",
+            "description": "Applicant Name",
+            "example": "MUSTAPHA  ZUBAIRU"
+          },
+          "TotalPrincipalOutstanding": {
+            "type": "string",
+            "description": "Total Principal Outstanding",
+            "example": "1.0E7"
+          },
+          "TotalInterestOutstanding": {
+            "type": "string",
+            "description": "Total Interest Outstanding",
+            "example": "1.201535821E7"
+          },
+          "PrincipalOverDue": {
+            "type": "string",
+            "description": "Principal OverDue",
+            "example": "2641572.46"
+          },
+          "PrincipalNotDue": {
+            "type": "string",
+            "description": "Principal Not Due",
+            "example": "7358427.54"
+          },
+          "InterestNotDue": {
+            "type": "string",
+            "description": "Interest Not Due",
+            "example": "4199662.79"
+          },
+          "InterestOverDue": {
+            "type": "string",
+            "description": "Interest Over Due",
+            "example": "7815695.42"
+          },
+          "NextPrincipalDue": {
+            "type": "string",
+            "description": "Next Principal Due",
+            "example": "68158.7"
+          },
+          "NextInterestDue": {
+            "type": "string",
+            "description": "Next Interest Due",
+            "example": "115302.14"
+          },
+          "PrincipalPaid": {
+            "type": "string",
+            "description": "Principal Paid",
+            "example": "0"
+          },
+          "InterestPaid": {
+            "type": "string",
+            "description": "Interest Paid",
+            "example": "0"
+          },
+          "InterestPenaltyPaid": {
+            "type": "string",
+            "description": "Interest Penalty Paid",
+            "example": "0"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Customer Loan Statement"
+      },
+      "description": "Array of Loan Statements"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Customer Loan Summary",
+  "example": {
+  "ResponseCode": "00",
+  "ResponseMessage": "Successful",
+  "loanstmtbycustomernoresp": [
+    {
+      "LoanAccountNumber": "099CTLA153010003",
+      "CustomerNo": "000000012",
+      "BranchCode": "099",
+      "ProductCode": "CTLA",
+      "ProductCategory": "CORPORATE",
+      "ProductDescription": "CORPORATE TERM LOANS AMORTIZED",
+      "CustomerName": "MUSTAPHA  ZUBAIRU",
+      "DomiciliaryAddress": "RAPHAEL OKONKWO COMP,UMUEZEOKAMZIM VILLAGE,NNEWI,  NNEWI",
+      "CustomerAddress": "RAPHAEL OKONKWO COMP,UMUEZEOKAMZIM VILLAGE,NNEWI,  NNEWI,NG",
+      "OriginalStartDate": "2015-10-28 00:00:00",
+      "BookDate": "2015-10-28 00:00:00",
+      "ValueDate": "2015-10-28 00:00:00",
+      "MaturityDate": "2025-10-28 00:00:00",
+      "LoanTenor": "3653",
+      "LoanStatus": "Active",
+      "CurrencyCode": "NGN",
+      "AmountFinanced": "1.0E7",
+      "ApplicantName": "MUSTAPHA  ZUBAIRU",
+      "TotalPrincipalOutstanding": "1.0E7",
+      "TotalInterestOutstanding": "1.201535821E7",
+      "PrincipalOverDue": "2641572.46",
+      "PrincipalNotDue": "7358427.54",
+      "InterestNotDue": "4199662.79",
+      "InterestOverDue": "7815695.42",
+      "NextPrincipalDue": "68158.7",
+      "NextInterestDue": "115302.14",
+      "PrincipalPaid": "0",
+      "InterestPaid": "0",
+      "InterestPenaltyPaid": "0"
+    }
+  ]
+}
+}

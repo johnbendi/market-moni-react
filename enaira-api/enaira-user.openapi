@@ -1,0 +1,565 @@
+eNaira
+
+eNairaUser
+- https://rgw.k8s.apis.ng/centric-platforms/uat/enaira-user/CreateMerchantV2
+{
+  "channelCode": "APISNG",
+  "reference": "01372577-0001",
+  "uid": "01372577-0001",
+  "uidType": "TIN",
+  "businessName": "MIKE DAD NIGERIA LIMITED",
+  "title": "Mr",
+  "dirBvn": "22148167269",
+  "dirFirstName": "Ifeanyichukwu",
+  "dirMiddleName": "Oluyomi",
+  "dirLastName": "Pius",
+  "userName": "icmbah@cbn.gov.ng",
+  "phone": "08036089730",
+  "emailId": "icmbah@cbn.gov.ng",
+  "postalCode": "900110",
+  "city": "gwarinpa",
+  "address": "Lagos Estate, Abuja",
+  "countryOfResidence": "NG",
+  "customerRiskRating": "3",
+  "tier": "2",
+  "accountNumber": "0029592452",
+  "dirDateOfBirth": "31/12/1982",
+  "countryOfBirth": "NG",
+  "parentWalletAlias": "",
+  "password": "123456789123",
+  "walletCategory": "parent",
+  "remarks": "Passed"
+}{
+  "response_code": "00",
+  "response_message": "Successful Request",
+  "response_data": {
+    "status": 200,
+    "code": "CAML-KYCB2000",
+    "nuban": "1000028526",
+    "message": "Merchant Details was successfully sent for wallet creation."
+  }
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/enaira-user/CreateConsumerV2
+{
+  "type": "object",
+  "example": {
+    "channelCode": "APISNG",
+    "uid": "22142360969",
+    "uidType": "BVN",
+    "reference": "NXG3547585HGTKJHGO",
+    "title": "Mr",
+    "firstName": "Ifeanyichukwu",
+    "middleName": "Gerald",
+    "lastName": "Mbah",
+    "userName": "icmbah@cbn.gov.ng",
+    "phone": "08036349590",
+    "emailId": "icmbah@cbn.gov.ng",
+    "postalCode": "900110",
+    "city": "gwarinpa",
+    "address": "Lagos Estate, Abuja",
+    "countryOfResidence": "NG",
+    "tier": "2",
+    "accountNumber": "0025592222",
+    "dateOfBirth": "31/12/1987",
+    "countryOfBirth": "NG",
+    "password": "1234567890",
+    "remarks": "Passed",
+    "referralCode": "@imbah.01"
+  },
+  "name": "body"
+}
+
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/enaira-user/PayWithToken
+{
+  "type": "object",
+  "example": {
+    "amount": "100",
+    "phone_number": "08056064768",
+    "reference": "NXG263849456678494949",
+    "transaction_token": "1234",
+    "invoice_id": "01G9S2M2P1A2K06J9H1TDZPBTJ",
+    "product_code": "003",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+  "amount": "100",
+  "phone_number": "08056064768",
+  "reference": "NXG263849456678494949",
+  "transaction_token": "1234",
+  "invoice_id": "01G9S2M2P1A2K06J9H1TDZPBTJ",
+  "product_code": "003",
+  "channel_code": "NEXTGEN"
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/enaira-user/GetUserDetailsByWalletAlias
+{
+  "type": "object",
+  "example": {
+    "wallet_alias": "@eonuoha.01",
+    "user_type": "user",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+  "response_code": "00",
+  "response_message": "Successful Request",
+  "response_data": {
+    "uid": "64625226407",
+    "uid_type": "BVN",
+    "kyc_status": "ACCEPTED",
+    "phone": "08056064768",
+    "email_id": "64625226407@enaira.gov.ng",
+    "first_name": "EMMANUEL",
+    "last_name": "ONUOHA",
+    "middle_name": "EZECHI",
+    "title": "",
+    "town": "Abuja",
+    "state_of_residence": "15",
+    "lga": "Ezinihitte",
+    "address": "35,JAMIU RAJI STREET,AGODO EGBE LAGOS",
+    "country_of_origin": "NG",
+    "account_number": "1000258985",
+    "tier": "2",
+    "country_of_birth": "NG",
+    "state_of_origin": "10",
+    "inst_code": "082",
+    "enaira_bank_code": "keystone",
+    "relationship_bank": "Keystone Bank",
+    "wallet_info": {
+      "tier": "2",
+      "nuban": "1000021242",
+      "message": "Created successfully",
+      "wallet_alias": "@eonuoha.01",
+      "wallet_address": "01G5P2NYVBPBK362FJK6X682CS",
+      "daily_tnx_limit": "200000.00"
+    },
+    "password": "4cf03413139f02046c0c4ddb559790ef",
+    "referrers_code": null
+  }
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/enaira-user/GetUserDetailsByPhone
+{
+  "type": "object",
+  "example": {
+    "phone_number": "08056064768",
+    "user_type": "USER",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+  "status": 200,
+  "data": {
+    "uid": "64625226407",
+    "uid_type": "BVN",
+    "kyc_status": "ACCEPTED",
+    "phone": "08056064768",
+    "email_id": "64625226407@enaira.gov.ng",
+    "first_name": "EMMANUEL",
+    "last_name": "ONUOHA",
+    "middle_name": "EZECHI",
+    "title": "",
+    "town": "Abuja",
+    "state_of_residence": "15",
+    "lga": "Ezinihitte",
+    "address": "35,JAMIU RAJI STREET,AGODO EGBE LAGOS",
+    "country_of_origin": "NG",
+    "account_number": "1000258985",
+    "tier": "2",
+    "country_of_birth": "NG",
+    "state_of_origin": "10",
+    "inst_code": "082",
+    "enaira_bank_code": "keystone",
+    "relationship_bank": "Keystone Bank",
+    "wallet_info": {
+      "tier": "2",
+      "nuban": "1000021242",
+      "message": "Created successfully",
+      "wallet_alias": "@eonuoha.01",
+      "wallet_address": "01G5P2NYVBPBK362FJK6X682CS",
+      "daily_tnx_limit": "200000.00"
+    },
+    "password": "4cf03413139f02046c0c4ddb559790ef",
+    "referrers_code": null
+  },
+  "code": "CAML-KYCP7000"
+}
+
+eNaira
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateWithdrawal
+{
+  "example": {
+    "user_id": "thelmaaa",
+    "user_email": "test_user+access@bitt.com",
+    "user_type": "USER",
+    "user_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkB0YWNoLjAxZiIsImV4cGlyeSI6IjIwMjEtMDktMjdUMTM6MjU6NDMuMDg2NDMxWiIsImlzcyI6ImdvbmRvciBjb21tZXJjZSIsIm9yZyI6ImNmYiIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJ1c2VyaWQiOiIwMUZFUERXS1BHVjkxVzRCRE45MTczTjBWRyJ9.zMIxdoqkxY3MFnY7zRUeQdA88SrXD-KcukT2fePc3a4IMhtuAuBcNjSnVQ9J4AUNAz2BQGnhvjsJiOJGcV4M6w1n1tFJMr6xnDTChb2OZa2eSi6u3qjppOKXgQ_t0EOPpTC9Iqx3zgRt0C6Nl1z14ixmGmaAY0SKKgjHSI1ieiuRtzJuJi7qq7nHf_u4iypr4mMN1H6KCrIq86xEPp2bN2H3cEHQr2AaSjLamoPkT_oA0RHoNroZvTqmpZE80hvYHBSECUagiAazlb_ANMJgNF0zo_uSSMkyXHpASwqdaZnPLgINzLkIJrfNLwDf4P1VEh9VoaB1E9ElQanZVBrN51VDhBitTzGolSxk0_P37aVPrS9yeWceJTHs1GojMOGCosYRu_wi05n0bsG_iAEFRFxlV3pT-2YdS5YAbUdEJj65NO-6SkmPQBcMGCwHCztDn6h6lQZiUPgjnTqsSUq_kUC_X3ki4I7fVohm-Z9jplLOPHHk88CmlJnUI0AgYYfJQw8Kwi5010-1eTz6EFVI7_fjeV_OPI-emxJ4F1QaUy934XC69kWPDgfeLtBfYmee3M3N6MaD6eurltD23YknDhg-VWcBD_BycmUKMIQ5hXHL-0ix_e97zr1kw7UjcwdNwlCC6m9AkrEhevzvG4nQ3ZIVRhb_fklXykYITjulUmQ",
+    "account_no": "0760261888",
+    "amount": "0.01",
+    "reference": "NXG12345g4316918K14867619A",
+    "narration": "Testing withdrawal",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/GetBalance
+{
+  "example": {
+    "user_email": "test_user+access@bitt.com",
+    "user_token": "eyJhbGciOiJSUI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkB0YWNoLjAxZiIsImV4cGlyeSI6IjIwMjEtMDktMjdUMTM6MjU6NDMuMDg2NDMxWiIsImlzcyI6ImdvbmRvciBjb21tZXJjZSIsIm9yZyI6ImNmYiIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJ1c2VyaWQiOiIwMUZFUERXS1BHVjkxVzRCRE45MTczTjBWRyJ9.zMIxdoqkxY3MFnY7zRUeQdA88SrXD-KcukT2fePc3a4IMhtuAuBcNjSnVQ9J4AUNAz2BQGnhvjsJiOJGcV4M6w1n1tFJMr6xnDTChb2OZa2eSi6u3qjppOKXgQ_t0EOPpTC9Iqx3zgRt0C6Nl1z14ixmGmaAY0SKKgjHSI1ieiuRtzJuJi7qq7nHf_u4iypr4mMN1H6KCrIq86xEPp2bN2H3cEHQr2AaSjLamoPkT_oA0RHoNroZvTqmpZE80hvYHBSECUagiAazlb_ANMJgNF0zo_uSSMkyXHpASwqdaZnPLgINzLkIJrfNLwDf4P1VEh9VoaB1E9ElQanZVBrN51VDhBitTzGolSxk0_P37aVPrS9yeWceJTHs1GojMOGCosYRu_wi05n0bsG_iAEFRFxlV3pT-2YdS5YAbUdEJj65NO-6SkmPQBcMGCwHCztDn6h6lQZiUPgjnTqsSUq_kUC_X3ki4I7fVohm-Z9jplLOPHHk88CmlJnUI0AgYYfJQw8Kwi5010-1eTz6EFVI7_fjeV_OPI-emxJ4F1QaUy934XC69kWPDgfeLtBfYmee3M3N6MaD6eurltD23YknDhg-VWcBD_BycmUKMIQ5hXHL-0ix_e97zr1kw7UjcwdNwlCC6m9AkrEhevzvG4nQ3ZIVRhb_fklXykYITjulUmQ",
+    "user_type": "USER",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+    "response_code": "00",
+    "response_message": "Successful Request",
+    "response_data": {
+        "wallet_balance": "0.00",
+        "kyc_status": "ACCEPTED",
+        "wallet_type": "Registered User",
+        "withdrawal_preauth_state": "inactive",
+        "currency_code": "DXCD"
+    }
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateDeposit
+{
+  "user_id": "thelmaaa",
+  "user_type": "USER",
+  "user_email": "userexample@gmail.com",
+  "user_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkB0YWNoLjAxZiIsImV4cGlyeSI6IjIwMjEtMDktMjdUMTM6MjU6NDMuMDg2NDMxWiIsImlzcyI6ImdvbmRvciBjb21tZXJjZSIsIm9yZyI6ImNmYiIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJ1c2VyaWQiOiIwMUZFUERXS1BHVjkxVzRCRE45MTczTjBWRyJ9.zMIxdoqkxY3MFnY7zRUeQdA88SrXD-KcukT2fePc3a4IMhtuAuBcNjSnVQ9J4AUNAz2BQGnhvjsJiOJGcV4M6w1n1tFJMr6xnDTChb2OZa2eSi6u3qjppOKXgQ_t0EOPpTC9Iqx3zgRt0C6Nl1z14ixmGmaAY0SKKgjHSI1ieiuRtzJuJi7qq7nHf_u4iypr4mMN1H6KCrIq86xEPp2bN2H3cEHQr2AaSjLamoPkT_oA0RHoNroZvTqmpZE80hvYHBSECUagiAazlb_ANMJgNF0zo_uSSMkyXHpASwqdaZnPLgINzLkIJrfNLwDf4P1VEh9VoaB1E9ElQanZVBrN51VDhBitTzGolSxk0_P37aVPrS9yeWceJTHs1GojMOGCosYRu_wi05n0bsG_iAEFRFxlV3pT-2YdS5YAbUdEJj65NO-6SkmPQBcMGCwHCztDn6h6lQZiUPgjnTqsSUq_kUC_X3ki4I7fVohm-Z9jplLOPHHk88CmlJnUI0AgYYfJQw8Kwi5010-1eTz6EFVI7_fjeV_OPI-emxJ4F1QaUy934XC69kWPDgfeLtBfYmee3M3N6MaD6eurltD23YknDhg-VWcBD_BycmUKMIQ5hXHL-0ix_e97zr1kw7UjcwdNwlCC6m9AkrEhevzvG4nQ3ZIVRhb_fklXykYITjulUmQ",
+  "account_no": "0760261888",
+  "amount": "0.01",
+  "reference": "NXG1235g43T7H5K47856879",
+  "narration": "Testing deposit",
+  "channel_code": "APISNG"
+}{
+    "response_code": "99",
+    "response_message": "Failed Request - Reference Already Used | Last Response Message: Successfully Saved and Authorized",
+    "response_data": ""
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/GetTransactions
+{
+  "example": {
+    "user_email": "test_user+access@bitt.com",
+    "user_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkB0YWNoLjAxZiIsImV4cGlyeSI6IjIwMjEtMDktMjdUMTM6MjU6NDMuMDg2NDMxWiIsImlzcyI6ImdvbmRvciBjb21tZXJjZSIsIm9yZyI6ImNmYiIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJ1c2VyaWQiOiIwMUZFUERXS1BHVjkxVzRCRE45MTczTjBWRyJ9.zMIxdoqkxY3MFnY7zRUeQdA88SrXD-KcukT2fePc3a4IMhtuAuBcNjSnVQ9J4AUNAz2BQGnhvjsJiOJGcV4M6w1n1tFJMr6xnDTChb2OZa2eSi6u3qjppOKXgQ_t0EOPpTC9Iqx3zgRt0C6Nl1z14ixmGmaAY0SKKgjHSI1ieiuRtzJuJi7qq7nHf_u4iypr4mMN1H6KCrIq86xEPp2bN2H3cEHQr2AaSjLamoPkT_oA0RHoNroZvTqmpZE80hvYHBSECUagiAazlb_ANMJgNF0zo_uSSMkyXHpASwqdaZnPLgINzLkIJrfNLwDf4P1VEh9VoaB1E9ElQanZVBrN51VDhBitTzGolSxk0_P37aVPrS9yeWceJTHs1GojMOGCosYRu_wi05n0bsG_iAEFRFxlV3pT-2YdS5YAbUdEJj65NO-6SkmPQBcMGCwHCztDn6h6lQZiUPgjnTqsSUq_kUC_X3ki4I7fVohm-Z9jplLOPHHk88CmlJnUI0AgYYfJQw8Kwi5010-1eTz6EFVI7_fjeV_OPI-emxJ4F1QaUy934XC69kWPDgfeLtBfYmee3M3N6MaD6eurltD23YknDhg-VWcBD_BycmUKMIQ5hXHL-0ix_e97zr1kw7UjcwdNwlCC6m9AkrEhevzvG4nQ3ZIVRhb_fklXykYITjulUmQ",
+    "user_type": "user",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateConsumer
+{
+  "example": {
+    "channel_code": "APISNG",
+    "customer_tier": "2",
+    "reference": "NXG34567898FGHJJB1",
+    "account_no": "0689658501",
+    "bvn": "22152793496",
+    "password": "Password10$$",
+    "nin": ""
+  },
+  "name": "body"
+}{
+    "response_code": "99",
+    "response_message": "Duplicate reference",
+    "response_data": ""
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/PaymentFromWallet
+{
+  "example": {
+    "channel_code": "APISNG",
+    "user_email": "test_user+access@bitt.com",
+    "user_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkB0YWNoLjAxZiIsImV4cGlyeSI6IjIwMjEtMDktMjdUMTM6MjU6NDMuMDg2NDMxWiIsImlzcyI6ImdvbmRvciBjb21tZXJjZSIsIm9yZyI6ImNmYiIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJ1c2VyaWQiOiIwMUZFUERXS1BHVjkxVzRCRE45MTczTjBWRyJ9.zMIxdoqkxY3MFnY7zRUeQdA88SrXD-KcukT2fePc3a4IMhtuAuBcNjSnVQ9J4AUNAz2BQGnhvjsJiOJGcV4M6w1n1tFJMr6xnDTChb2OZa2eSi6u3qjppOKXgQ_t0EOPpTC9Iqx3zgRt0C6Nl1z14ixmGmaAY0SKKgjHSI1ieiuRtzJuJi7qq7nHf_u4iypr4mMN1H6KCrIq86xEPp2bN2H3cEHQr2AaSjLamoPkT_oA0RHoNroZvTqmpZE80hvYHBSECUagiAazlb_ANMJgNF0zo_uSSMkyXHpASwqdaZnPLgINzLkIJrfNLwDf4P1VEh9VoaB1E9ElQanZVBrN51VDhBitTzGolSxk0_P37aVPrS9yeWceJTHs1GojMOGCosYRu_wi05n0bsG_iAEFRFxlV3pT-2YdS5YAbUdEJj65NO-6SkmPQBcMGCwHCztDn6h6lQZiUPgjnTqsSUq_kUC_X3ki4I7fVohm-Z9jplLOPHHk88CmlJnUI0AgYYfJQw8Kwi5010-1eTz6EFVI7_fjeV_OPI-emxJ4F1QaUy934XC69kWPDgfeLtBfYmee3M3N6MaD6eurltD23YknDhg-VWcBD_BycmUKMIQ5hXHL-0ix_e97zr1kw7UjcwdNwlCC6m9AkrEhevzvG4nQ3ZIVRhb_fklXykYITjulUmQ",
+    "user_type": "USER",
+    "destination_wallet_alias": "@imbah.01",
+    "amount": 10,
+    "reference": "NXG253648348939438",
+    "narration": "Testing"
+  },
+  "name": "body"
+}{
+    "response_code": "99",
+    "response_message": "Duplicate transaction reference",
+    "response_data": ""
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateInvoice
+{
+  "example": {
+    "amount": 100,
+    "narration": "Testing Payment",
+    "reference": "NXG2638494749493",
+    "product_code": "001",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+    "response_code": "00",
+    "response_message": "Successful Request",
+    "response_data": {
+        "amount": "100.00",
+        "callbackUrl": null,
+        "guid": "01G7T2JF2HG64H55A81E7F3XX0",
+        "message": "ECommerce Invoice Created.",
+        "note": "Testing Payment",
+        "paymentId": "NXG2638494749493",
+        "state": "complete"
+    }
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/PayWithTransactionPin
+{
+  "example": {
+    "channel_code": "APISNG",
+    "phone_number": "08056064768",
+    "amount": 100,
+    "reference": "NXG2638494749493",
+    "transaction_pin": "1234",
+    "invoice_id": "01G7T2JF2HG64H55A81E7F3XX0",
+    "product_code": "001"
+  },
+  "name": "body"
+}{
+    "response_code": "99",
+    "response_message": "Failed Request",
+    "response_data": {
+        "Data": {
+            "status": 400,
+            "error": "payment for this invoice has already been initiated",
+            "code": "CAML-INVP1002"
+        }
+    }
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CAMLLogin
+{
+  "type": "object",
+  "example": {
+    "user_id": "userexample@gmail.com",
+    "password": "Password10$$",
+    "allow_tokenization": "Y",
+    "user_type": "USER",
+    "channel_code": "APISNG"
+  },
+  "name": "body"
+}{
+  "response_code": "00",
+  "response_message": "Login Successful",
+  "response_data": {
+    "alias": "@aadegok.01",
+    "needsPasswordReset": false,
+    "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IkBhYWRlZ29rLjAxIiwiZXhwaXJ5IjoiMjAyMi0wOC0wM1QxNzo0NzoxNi4zMTQwMzlaIiwiaXNzIjoiZ29uZG9yIGNvbW1lcmNlIiwib3JnIjoiYWNjZXNzIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsInVzZXJpZCI6IjAxRzZOUU0xWTFSUFc5OVlWRjFGMkJQTkZHIn0.R8P4ripUxpNAfotJcgkhhpyNEhwRKtt1-v_GLsEWY0c2U4uTtKCdDqhloSbFCj4CF-9yah05K1CxhrBST8nmu0wlQEBPahiimWRhpxKErrA30GsJI_RrDtYzwh6GdY97zxBpJXYr6AKZ_S8b0XmdB_feT0V4ZAeq5efs70AZZ7FWWLKNOgqo5NxJh7AWGuxrEzVc5Xx1A9Ou4YcqenBIoHTYkHyFQpuc_DSCLqcqQ0JJctQuNXO7_m1d2v8VNWhY2ZFWC6fnFRllHxcYbv0SADfs6FubQrnlOGd-oZQTGiJJUAB61sfIeArH1ZMibyCK5SQCqoYUBjK1PtFUh9zq-PzlMmTfnXirwDaejUfYEkCdFhqoVECH9zRtC3R_VyIsT13fZTtFLO-q4kjgdEXu4ScaIJvMCsgdQFw9VDMx2dCTKwnVRuwJn2f8NSmNXx66WmXSBSGuYQOOZVQN8yvwsX19dP_jyaKCecc-PGsARiyjJZzgM4YzBaaxLfY5jKZvWO7aEZ2zb_7kPPbzM2ZM67lxooOfHb2X-Jr1o8xKcmrvNXbjvrnPeQa5GoDoPl1UE0nGK-zD4UlLLc2GGKwZwFSw9mevSkNj99uhUYcOnvnoK7HBK3HyHyTMewqK2nCKJHgWed5tFAVG00wCyrGPnPMGLFZIikC4IsrsCAOoLx4"
+  }
+}
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateMerchant
+{
+  "type": "object",
+  "example": {
+    "channel_code": "APISNG",
+    "customer_tier": "2",
+    "reference": "NXG34567898FGHJJB8",
+    "tin": "00000015-0001",
+    "account_no": "0068626654",
+    "director_bvn": "22334744900",
+    "user_name": "accessbank",
+    "city": "Lagos",
+    "state": "Lagos",
+    "wallet_category": "parent",
+    "password": "Password10$$"
+  },
+  "name": "body"
+}{
+  "response_code": "00",
+  "response_message": "Successful Request",
+  "response_data": {
+    "status": 200,
+    "code": "CAML-KYCB2000",
+    "nuban": "1000026481",
+    "message": "Merchant Details was successfully sent for wallet creation."
+  }
+}
+
+Customer Onboarding
+- https://rgw.k8s.apis.ng/centric-platforms/uat/CreateCustomerAccount
+{
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Source",
+      "example": "BWONLINE"
+    },
+    "app_user_id": {
+      "type": "string",
+      "description": "App User ID",
+      "example": "BWORLDUSER"
+    },
+    "app_branch_code": {
+      "type": "string",
+      "description": "App Branch Code",
+      "example": 99
+    },
+    "account_branch_code": {
+      "type": "string",
+      "description": "Account Branch Code",
+      "example": "171"
+    },
+    "customer_no": {
+      "type": "string",
+      "example": 8117565,
+      "description": "Customer Number"
+    },
+    "account_class": {
+      "type": "string",
+      "example": "020003",
+      "description": "Account Class"
+    },
+    "account_ccycode": {
+      "type": "string",
+      "example": "NGN",
+      "description": "Account Country Currency Code"
+    },
+    "account_name": {
+      "type": "string",
+      "example": "Nick Thomas",
+      "description": "Account Name"
+    },
+    "account_onpostnocr": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On POST NO CREDIT?"
+    },
+    "account_ondormant": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On Dormant?"
+    },
+    "account_classtype": {
+      "type": "string",
+      "example": "S",
+      "description": "Account Class Type"
+    },
+    "account_opendate": {
+      "type": "string",
+      "example": "2020-08-03",
+      "description": "Account Opening Date"
+    },
+    "account_onfrozen": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On Frozen?"
+    },
+    "chequebook_account": {
+      "type": "string",
+      "example": "Y",
+      "description": "Cheque Book Account?"
+    },
+    "atm_account": {
+      "type": "string",
+      "example": "Y",
+      "description": "ATM Account?"
+    },
+    "min_balreqd": {
+      "type": "string",
+      "example": "0",
+      "description": "Minimum Balance Required"
+    },
+    "salary_account": {
+      "type": "string",
+      "example": "N",
+      "description": "Salary Account?"
+    },
+    "maker_id": {
+      "type": "string",
+      "example": "BWORLDUSER",
+      "description": "Maker ID"
+    },
+    "checker_id": {
+      "type": "string",
+      "example": "BWORLDUSER",
+      "description": "Checker ID"
+    },
+    "auth_stat": {
+      "type": "string",
+      "example": "A",
+      "description": "Auth Stat"
+    },
+    "comp_mis2": {
+      "type": "string",
+      "example": "RBB256",
+      "description": "Comp MIS 2"
+    },
+    "comp_mis3": {
+      "type": "string",
+      "description": "Comp MIS 3"
+    },
+    "comp_mis4": {
+      "type": "string",
+      "example": "12338618",
+      "description": "Comp MIS 4"
+    },
+    "account_onpnd": {
+      "type": "string",
+      "example": "N",
+      "description": "Account On POST NO DEBIT?"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "app_user_id",
+    "app_branch_code",
+    "account_branch_code",
+    "customer_no",
+    "account_class",
+    "account_ccycode",
+    "account_name",
+    "account_onpostnocr",
+    "account_ondormant",
+    "account_classtype",
+    "account_opendate",
+    "account_onfrozen",
+    "chequebook_account",
+    "atm_account",
+    "min_balreqd",
+    "salary_account",
+    "maker_id",
+    "checker_id",
+    "auth_stat",
+    "account_onpnd"
+  ],
+  "example": {
+    "source": "TESTAPP",
+    "app_user_id": "TESTAPPUSR",
+    "app_branch_code": "099",
+    "account_branch_code": "099",
+    "customer_no": "007479302",
+    "account_class": "020008",
+    "account_ccycode": "NGN",
+    "account_name": "DANIEL MAKINDE",
+    "account_onpnd": "N",
+    "account_onpostnocr": "N",
+    "account_ondormant": "N",
+    "account_classtype": "S",
+    "account_opendate": "2022-06-20 12:00:00",
+    "account_onfrozen": "N",
+    "chequebook_account": "N",
+    "atm_account": "N",
+    "min_balreqd": "0",
+    "salary_account": "N",
+    "maker_id": "TESTAPPUSR",
+    "checker_id": "TESTAPPUSR",
+    "auth_stat": "A",
+    "comp_mis2": "ABK",
+    "comp_mis3": "",
+    "comp_mis4": "12632119"
+  },
+  "name": "CreateCustomerAccount",
+  "type": "object"
+}{
+    "response_code": "00",
+    "response_desc": "Successful Request",
+    "accountno_created": "1590958663",
+    "bo_code": "ST-SAVE-002",
+    "bo_message": "Record Successfully Saved and Authorized"
+}

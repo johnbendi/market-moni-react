@@ -1,0 +1,78 @@
+Fintect Connect
+
+Payment Gateway
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/instant-payment/GetTransactions
+{
+  "type": "object",
+  "example": {
+    "merchant_id": "YOUR MERCHANT ID",
+    "channel_code": "QOINPAY",
+    "start_date": "23/11/2021",
+    "end_date": "23/11/2021"
+  },
+  "name": "body"
+}{
+  "response_code": "00",
+  "response_message": "Successful Request",
+  "response_data": {
+    "transactions": [
+      {
+        "request_id": "VPAMT1818922561",
+        "customer_id": "08038087624",
+        "merchant_id": "MTN",
+        "virtual_account_no": "1433241033",
+        "virtual_account_name": "AFOLABI LADITI",
+        "captured_datetime": "2021-11-23T18:55:34Z",
+        "completed_datetime": "2021-11-23T18:55:34Z",
+        "transaction_status": "COMPLETED",
+        "amount_paid": "2000",
+        "amount_moved_to_pool": "1996",
+        "notification_sent": "MessageSent"
+      }
+    ]
+  }
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/instant-payment/CheckTransactionStatus
+{
+  "type": "object",
+  "example": {
+    "merchant_id": "YOUR MERCHANT ID",
+    "request_id": "BREEee284a5c2cec97867",
+    "channel_code": "QOINPAY"
+  },
+  "name": "body"
+}{
+  "response_code": "00",
+  "response_message": "Successful Request",
+  "response_data": {
+    "request_id": "BREEee284a5c2cec97867",
+    "customer_id": "07032755966",
+    "merchant_id": "BREEZE",
+    "virtual_account_no": "1393193234",
+    "virtual_account_name": "BREEZE - THELMA OHUE",
+    "captured_datetime": "2021-12-13T16:54:59Z",
+    "completed_datetime": "2021-12-13T16:54:59Z",
+    "transaction_status": "ACTIVE",
+    "amount_paid": null,
+    "amount_moved_to_pool": null,
+    "notification_sent": null
+  }
+}
+
+- https://rgw.k8s.apis.ng/centric-platforms/uat/instant-payment/ConfirmPayment
+{
+  "customer_id": "07032755966",
+  "merchant_id": "YOUR MERCHANT ID",
+  "request_id": "ACCE994bbe57eeecbbe978",
+  "channel_code": "QOINPAY"
+}{
+  "response_code": "00",
+  "response_message": "Payment Confirmed",
+  "response_data": {
+    "transaction_status": "COMPLETED",
+    "moved_to_pool": "Y",
+    "moved_to_suspense": "N"
+  }
+}
