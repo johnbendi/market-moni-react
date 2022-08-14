@@ -39,7 +39,10 @@ function Register(props) {
 
   return (
     <CardBody>
-      <CardTitle tag="h5">Register</CardTitle>
+      <CardTitle tag="h5" className="mb-4">
+        Register
+      </CardTitle>
+
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label for="channelCode">ChannelCode</Label>

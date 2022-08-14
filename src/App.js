@@ -1,6 +1,6 @@
 // import logo from "./logo.svg"
-import { Card, CardBody, CardHeader, Nav, NavItem, NavLink } from "reactstrap"
-import { MdAppRegistration, MdLogin } from "react-icons/md"
+import { Card, CardHeader } from "reactstrap"
+// import { MdAppRegistration, MdLogin } from "react-icons/md"
 import { Outlet, Link, Navigate } from "react-router-dom"
 
 import "./App.css"
@@ -8,7 +8,9 @@ import "./App.css"
 function App() {
   return (
     <Card className="m-2">
-      <CardHeader>Market Moni</CardHeader>
+      <CardHeader>
+        <Link to="/register">Market Mon</Link>
+      </CardHeader>
       <Outlet />
     </Card>
   )
